@@ -1,7 +1,7 @@
 import requests
 import googlemaps
 from gmplot import gmplot
-from datetime import datetime
+
 
 gmaps = googlemaps.Client(key='AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE')
 
