@@ -1,6 +1,7 @@
 import requests
 import googlemaps
 from gmplot import gmplot
+import wikipedia
 
 
 gmaps = googlemaps.Client(key='AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE')
@@ -11,15 +12,22 @@ result = r.json()
 
 
 r = requests.get('http://api.open-notify.org/astros.json')
-astronuts_names = r.json()
+astronauts_names = r.json()
 
 
 
 astronauts_in_space = astronauts_names['people']
 
+List_of_names = []
 
 for person in astronauts_in_space:
     print(person['name'])
+    List_of_names.append(person['name'])
+
+number_in_space = astronauts_names['number']
+print('Number of people in space:', number_in_space)
+
+print(List_of_names)
 
 
 
