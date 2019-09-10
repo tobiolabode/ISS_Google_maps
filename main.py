@@ -9,6 +9,20 @@ gmaps = googlemaps.Client(key='AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE')
 r = requests.get('http://api.open-notify.org/iss-now.json')
 result = r.json()
 
+
+r = requests.get('http://api.open-notify.org/astros.json')
+astronuts_names = r.json()
+
+
+
+astronauts_in_space = astronauts_names['people']
+
+
+for person in astronauts_in_space:
+    print(person['name'])
+
+
+
 location = result['iss_position']
 latitude = location['latitude']
 longitude = location['longitude']
