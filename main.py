@@ -29,6 +29,23 @@ print('Number of people in space:', number_in_space)
 
 print(List_of_names)
 
+# import pdb; pdb.set_trace()
+
+for every_person in List_of_names:
+    print('-------------------------' * 3, end='\n')
+
+    if every_person == 'Andrew Morgan':
+        every_person = 'Andrew R. Morgan'
+
+
+    if every_person == 'Alexander Skvortsov':
+        print('IF STATEMENT' * 5)
+        every_person = 'Aleksandr Skvortsov (cosmonaut)'
+
+
+    print(wikipedia.summary(every_person))
+
+
 
 
 location = result['iss_position']
