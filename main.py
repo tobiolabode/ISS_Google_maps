@@ -60,7 +60,7 @@ reverse_geocode_result = gmaps.reverse_geocode((latitude, longitude))
 print(reverse_geocode_result)
 
 
-google_maplot = gmplot.GoogleMapPlotter(latitude, longitude, 13)
+google_maplot = gmplot.GoogleMapPlotter(latitude, longitude, 4)
 
 google_maplot.apikey = 'AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE'
 

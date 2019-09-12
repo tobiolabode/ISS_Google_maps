@@ -6,15 +6,15 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false&key=AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE"></script>
 <script type="text/javascript">
 	function initialize() {
-		var centerlatlng = new google.maps.LatLng(-49.022100, -78.336800);
+		var centerlatlng = new google.maps.LatLng(40.127700, 135.365100);
 		var myOptions = {
-			zoom: 13,
+			zoom: 4,
 			center: centerlatlng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-		var latlng = new google.maps.LatLng(-49.022100, -78.336800);
+		var latlng = new google.maps.LatLng(40.127700, 135.365100);
 		var img = new google.maps.MarkerImage('file:///C:/Users/tnint/Anaconda3/envs/Googlemaps_env/lib/site-packages/gmplot/markers/6495ED.png');
 		var marker = new google.maps.Marker({
 		title: "no implementation",
