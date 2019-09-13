@@ -7,11 +7,13 @@
         height: 400px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
-       .column {
-        width:100px;
-        float:left;
-        padding-right: 100px;
+       .flex-container {
+        display: flex;
        }
+       /* .flex-header {
+         display: flex;
+
+       } */
     </style>
   </head>
   <body>
@@ -39,29 +41,14 @@ function initMap() {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE&callback=initMap">
     </script>
     <h1>test</h1>
-    <div class="column">
-        <h2>header text</h2>
-        <p>paragraph text</p>
-    </div>
-    <div class="column">
-        <h2>header text</h2>
-        <p>paragraph text</p>
-    </div>
-    <div class="column">
-        <h2>header text</h2>
-        <p>paragraph text</p>
-    </div>
-    <div class="column">
-        <h2>header text</h2>
-        <p>paragraph text</p>
-    </div>
-    <div class="column">
-        <h2>header text</h2>
-        <p>paragraph text</p>
-    </div>
-    <div class="column">
-        <h2>header text</h2>
-        <p>paragraph text</p>
+    <div class="flex-container">
+        <!-- <div class="flex-header"><h1>Test</h1> </div> -->
+         <div> <h1>test</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum, erat sit amet posuere malesuada, nulla lacus maximus eros, eget eleifend diam augue eget urna. Phasellus facilisis rutrum dolor. Mauris vehicula eget lacus sit amet fermentum. Aliquam quis libero eget leo convallis mattis eget a enim. Etiam auctor viverra magna, sit amet imperdiet nulla porttitor eget. Integer tincidunt volutpat lacinia. Ut fermentum sem odio, et efficitur velit faucibus eu. Curabitur sed felis ornare, gravida elit eu, interdum mauris. Suspendisse et ligula sit amet ex laoreet cursus sit amet nec augue. Proin sem sem, consequat ac mattis at, faucibus a dui. Proin consequat augue non est faucibus, vel malesuada orci sollicitudin. </div>
+         <div> <h1>test</h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum, erat sit amet posuere malesuada, nulla lacus maximus eros, eget eleifend diam augue eget urna. Phasellus facilisis rutrum dolor. Mauris vehicula eget lacus sit amet fermentum. Aliquam quis libero eget leo convallis mattis eget a enim. Etiam auctor viverra magna, sit amet imperdiet nulla porttitor eget. Integer tincidunt volutpat lacinia. Ut fermentum sem odio, et efficitur velit faucibus eu. Curabitur sed felis ornare, gravida elit eu, interdum mauris. Suspendisse et ligula sit amet ex laoreet cursus sit amet nec augue. Proin sem sem, consequat ac mattis at, faucibus a dui. Proin consequat augue non est faucibus, vel malesuada orci sollicitudin. </div>
+         <div> <h1>test</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum, erat sit amet posuere malesuada, nulla lacus maximus eros, eget eleifend diam augue eget urna. Phasellus facilisis rutrum dolor. Mauris vehicula eget lacus sit amet fermentum. Aliquam quis libero eget leo convallis mattis eget a enim. Etiam auctor viverra magna, sit amet imperdiet nulla porttitor eget. Integer tincidunt volutpat lacinia. Ut fermentum sem odio, et efficitur velit faucibus eu. Curabitur sed felis ornare, gravida elit eu, interdum mauris. Suspendisse et ligula sit amet ex laoreet cursus sit amet nec augue. Proin sem sem, consequat ac mattis at, faucibus a dui. Proin consequat augue non est faucibus, vel malesuada orci sollicitudin. </div>
+         <div> <h1>test</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum, erat sit amet posuere malesuada, nulla lacus maximus eros, eget eleifend diam augue eget urna. Phasellus facilisis rutrum dolor. Mauris vehicula eget lacus sit amet fermentum. Aliquam quis libero eget leo convallis mattis eget a enim. Etiam auctor viverra magna, sit amet imperdiet nulla porttitor eget. Integer tincidunt volutpat lacinia. Ut fermentum sem odio, et efficitur velit faucibus eu. Curabitur sed felis ornare, gravida elit eu, interdum mauris. Suspendisse et ligula sit amet ex laoreet cursus sit amet nec augue. Proin sem sem, consequat ac mattis at, faucibus a dui. Proin consequat augue non est faucibus, vel malesuada orci sollicitudin. </div>
+         <div><h1>test</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum, erat sit amet posuere malesuada, nulla lacus maximus eros, eget eleifend diam augue eget urna. Phasellus facilisis rutrum dolor. Mauris vehicula eget lacus sit amet fermentum. Aliquam quis libero eget leo convallis mattis eget a enim. Etiam auctor viverra magna, sit amet imperdiet nulla porttitor eget. Integer tincidunt volutpat lacinia. Ut fermentum sem odio, et efficitur velit faucibus eu. Curabitur sed felis ornare, gravida elit eu, interdum mauris. Suspendisse et ligula sit amet ex laoreet cursus sit amet nec augue. Proin sem sem, consequat ac mattis at, faucibus a dui. Proin consequat augue non est faucibus, vel malesuada orci sollicitudin. </div>
+         <div><h1>test</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum, erat sit amet posuere malesuada, nulla lacus maximus eros, eget eleifend diam augue eget urna. Phasellus facilisis rutrum dolor. Mauris vehicula eget lacus sit amet fermentum. Aliquam quis libero eget leo convallis mattis eget a enim. Etiam auctor viverra magna, sit amet imperdiet nulla porttitor eget. Integer tincidunt volutpat lacinia. Ut fermentum sem odio, et efficitur velit faucibus eu. Curabitur sed felis ornare, gravida elit eu, interdum mauris. Suspendisse et ligula sit amet ex laoreet cursus sit amet nec augue. Proin sem sem, consequat ac mattis at, faucibus a dui. Proin consequat augue non est faucibus, vel malesuada orci sollicitudin. </div>
     </div>
   </body>
 </html>
