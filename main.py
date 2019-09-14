@@ -2,6 +2,8 @@ import requests
 import googlemaps
 from gmplot import gmplot
 import wikipedia
+from bs4 import BeautifulSoup
+import requests
 
 
 gmaps = googlemaps.Client(key='AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE')
@@ -29,7 +31,12 @@ print('Number of people in space:', number_in_space)
 
 print(List_of_names)
 
-# import pdb; pdb.set_trace()
+List_desciptions = []
+links_for_images = []
+Link_of_page = []
+
+
+
 
 for every_person in List_of_names:
     print('-------------------------' * 3, end='\n')
@@ -38,11 +45,33 @@ for every_person in List_of_names:
         every_person = 'Andrew R. Morgan'
 
     if every_person == 'Alexander Skvortsov':
-        print('IF STATEMENT' * 5)
         every_person = 'Aleksandr Skvortsov (cosmonaut)'
 
     print(wikipedia.summary(every_person))
+    List_desciptions.append(wikipedia.summary(every_person))
+    Link_of_page.append(wikipedia.page(every_person).url)
 
+
+for every_link in Link_of_page:
+    print('---------NEW PERSON----------------' * 3, end='\n')
+    HTTP_results = requests.get(every_link)
+    page_results = HTTP_results.content
+
+    soup = BeautifulSoup(page_results, 'html.parser')
+    infocard = soup.find('table', class_='infobox biography vcard')
+    image_tags = infocard.findAll('img')
+
+    links_image_tags = []
+    for image_tag in image_tags:
+        print(image_tag.get('src'))
+        links_image_tags.append(image_tag.get('src'))
+
+    links_for_images.append(links_image_tags[0])
+
+
+print('----------------------')
+for i in links_for_images:
+    print(i)
 
 
 
