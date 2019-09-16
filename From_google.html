@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
        /* Set the size of the div element that contains the map */
       #map {
@@ -22,7 +23,6 @@
            max-width: 100%;
            max-height: 100%;
        }
-
     </style>
   </head>
   <body>
@@ -36,7 +36,7 @@ function initMap() {
   var uluru = {lat: {{latitude}}, lng: {{longitude}}};
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
+      document.getElementById('map'), {zoom: 3, center: uluru});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
 }
@@ -49,15 +49,21 @@ function initMap() {
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE&callback=initMap">
     </script>
-    <h1>test</h1>
-    <div class="flex-container">
-        <!-- <div class="flex-header"><h1>Test</h1> </div> -->
-         <div class="item"> <img src="{{ Links[0] }}" alt=""> <h1>{{ Names_of_austronuts[0] }}</h1> {{ desciptions[0] }} </div>
-         <div class="item"> <img src="{{ Links[1] }}" alt=""> <h1>{{ Names_of_austronuts[1] }}</h1> {{ desciptions[1] }} </div>
-         <div class="item"> <img src="{{ Links[2] }}" alt=""> <h1>{{ Names_of_austronuts[2] }}</h1> {{ desciptions[2] }} </div>
-         <div class="item"> <img src="{{ Links[3] }}" alt=""> <h1>{{ Names_of_austronuts[3] }}</h1> {{ desciptions[3] }} </div>
-         <div class="item"> <img src="{{ Links[4] }}" alt=""> <h1>{{ Names_of_austronuts[4] }}</h1> {{ desciptions[4] }} </div>
-         <div class="item"> <img src="{{ Links[5] }}" alt=""> <h1>{{ Names_of_austronuts[5] }}</h1> {{ desciptions[5] }} </div>
+    <h2 class="text-center">Location of the International Space Station is:</h2>
+    <h3 class="text-center">{{ Name_of_location }}</h3>
+    <h1 class="text-center mt-5">Astronauts on the International Space Station right now: </h1>
+    <div class=".container-fluid">
+      <div class="row">
+         <div class="col border"> <img src="{{ Links[0] }}" alt=""> <h1><a href="{{ Links_pages [0] }}">{{ Names_of_austronuts[0] }}</a></h1> {{ desciptions[0] }} </div>
+         <div class="col border"> <img src="{{ Links[1] }}" alt=""> <h1><a href="{{ Links_pages [1] }}">{{ Names_of_austronuts[1] }}</a></h1> {{ desciptions[1] }} </div>
+         <div class="col border"> <img src="{{ Links[2] }}" alt=""> <h1><a href="{{ Links_pages [2] }}">{{ Names_of_austronuts[2] }}</a></h1> {{ desciptions[2] }} </div>
+         <div class="col border"> <img src="{{ Links[3] }}" alt=""> <h1><a href="{{ Links_pages [3] }}">{{ Names_of_austronuts[3] }}</a></h1> {{ desciptions[3] }} </div>
+         <div class="col border"> <img src="{{ Links[4] }}" alt=""> <h1><a href="{{ Links_pages [4] }}">{{ Names_of_austronuts[4] }}</a></h1> {{ desciptions[4] }} </div>
+         <div class="col border"> <img src="{{ Links[5] }}" alt=""> <h1><a href="{{ Links_pages [5] }}">{{ Names_of_austronuts[5] }}</a></h1> {{ desciptions[5] }} </div>
+       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>

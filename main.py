@@ -3,7 +3,8 @@ import googlemaps
 from gmplot import gmplot
 import wikipedia
 from bs4 import BeautifulSoup
-import requests
+import json
+import re
 
 
 gmaps = googlemaps.Client(key='AIzaSyC0dEPMVePlBkEaqSs6O4l-E-sOcyawvOE')
@@ -87,6 +88,19 @@ longitudefloat = float(longitude)
 
 reverse_geocode_result = gmaps.reverse_geocode((latitude, longitude))
 print(reverse_geocode_result)
+
+with open('reverse_geocode_result.json', 'w') as json_file:
+    json.dump(reverse_geocode_result, json_file)
+
+
+if reverse_geocode_result[0]['formatted_address'] != re.search('Ocean', reverse_geocode_result[0]['formatted_address']):
+    Long_name = reverse_geocode_result[0]['formatted_address']
+else:
+    address_components = reverse_geocode_result[0]['address_components']
+    Long_name = address_components[0]['long_name']
+
+print(Long_name)
+
 
 
 google_maplot = gmplot.GoogleMapPlotter(latitude, longitude, 4)
